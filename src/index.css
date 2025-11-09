@@ -1,0 +1,196 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 42%;
+    --radius: 0.5rem;
+    --orange: 0 0% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-black text-white font-inter;
+  }
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.product-slide {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #111111;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.thumb-slide {
+  width: 82px;
+  height: 82px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  background-color: #111111;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.gradient-right {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 98%);
+}
+
+.product-cta-button {
+  background: linear-gradient(178deg, rgba(107, 114, 128, 1) 0%, rgba(107, 114, 128, 1) 10%, rgba(255, 255, 255, 0.07) 10%, rgba(255, 255, 255, 0.07) 100%);
+  border-radius: 10px;
+}
+
+/* Animation for product slide */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.product-slide {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom scrollbar for thumbnails */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Footer styles */
+footer a {
+  transition: all 0.2s ease;
+}
+
+/* Custom styles for the image carousel */
+.carousel-container {
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  color: white;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 500px) {
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+footer .payment-icon {
+  transition: all 0.3s ease;
+}
+
+footer .payment-icon:hover {
+  transform: translateY(-2px);
+}
+
+/* Product media section animations */
+.product-media-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.product-media-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-media-thumbnail {
+  transition: all 0.3s ease;
+}
+
+.product-media-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
