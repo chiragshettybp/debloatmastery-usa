@@ -13,7 +13,7 @@ const ProductStatsSection: React.FC = () => {
     description: "Started seeing visible results and improvements in their facial definition within 30 days"
   }];
   const handleButtonClick = () => {
-    window.open('https://rzp.io/rzp/g3w6qRIO', '_blank', 'noopener,noreferrer');
+    window.open('https://www.paypal.com/ncp/payment/CNM78K9DEKTPG', '_blank', 'noopener,noreferrer');
   };
   return <section className="w-full bg-black py-12 px-4">
       <motion.div className="max-w-md mx-auto" initial={{

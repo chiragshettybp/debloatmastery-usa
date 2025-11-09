@@ -29,14 +29,8 @@ const BottomOfferBar: React.FC<{
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes]);
   const handleButtonClick = () => {
-    const isIndiaPage = location.pathname === '/india' || location.pathname === '/';
-    const defaultLink = isIndiaPage ? 'https://rzp.io/rzp/wqjBY2Br' : 'https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ';
-    
-    if (paypalLink) {
-      window.open(paypalLink, "_blank", "noopener,noreferrer");
-    } else {
-      window.open(defaultLink, "_blank", "noopener,noreferrer");
-    }
+    const link = paypalLink || 'https://www.paypal.com/ncp/payment/CNM78K9DEKTPG';
+    window.open(link, "_blank", "noopener,noreferrer");
   };
   return <div className="fixed left-0 bottom-0 z-50 w-full" style={{
     pointerEvents: "none"

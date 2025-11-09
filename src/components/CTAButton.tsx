@@ -15,9 +15,7 @@ const CTAButton: React.FC<{
   }, []);
 
   const handleClick = () => {
-    const isIndiaPage = location.pathname === '/india' || location.pathname === '/';
-    const link = isIndiaPage ? 'https://rzp.io/rzp/wqjBY2Br' : 'https://rzp.io/rzp/g3w6qRIO';
-    window.open(link, '_blank', 'noopener,noreferrer');
+    window.open('https://www.paypal.com/ncp/payment/CNM78K9DEKTPG', '_blank', 'noopener,noreferrer');
     onClick();
   };
 
