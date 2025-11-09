@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import LinkInBio from "./pages/LinkInBio";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
           {/* Default home page - redirects to India */}
           <Route path="/" element={<Index />} />
           <Route path="/link-in-bio" element={<LinkInBio />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           
           {/* USA page */}
           <Route path="/usa" element={<Index />} />
