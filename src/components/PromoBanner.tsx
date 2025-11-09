@@ -26,7 +26,7 @@ interface PromoBannerProps {
   price?: string;
 }
 
-const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "₹", price = "49" }) => <div className="relative w-full px-4 mb-4">
+const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "$", price = "9" }) => <div className="relative w-full px-4 mb-4">
     {/* Animated glow burst behind banner */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
       <span className="
@@ -68,7 +68,7 @@ const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "₹", price = "49
           Everyday Price:
         </span>
         <span className="relative ml-2 text-2xl font-bold text-white select-none">
-          <span className="relative z-10">{currency}997</span>
+          <span className="relative z-10">{currency}29</span>
           <span className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-blue-300 z-20 w-full" style={{
           transform: "rotate(-14deg) translateY(-50%)"
         }} />
