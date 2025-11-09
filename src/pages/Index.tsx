@@ -41,7 +41,7 @@ const Index = () => {
         <ProductInfo />
         <BurgerComparisonSection />
         {/* --- Single Promo Bar Animation + Badge (just before bundle options) --- */}
-        <PromoBanner currency={isUSA ? "$" : "₹"} price={isUSA ? "9" : "49"} />
+        <PromoBanner currency="$" price="9" />
         <PromoBadge />
         
         {/* Product Showcase Section */}
